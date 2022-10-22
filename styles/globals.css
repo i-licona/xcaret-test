@@ -1,26 +1,488 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+/* global css styles */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  overflow-x: hidden;
 }
+/* header */
+header{
+  margin: 0;
+  padding: 0;
+  height: 94px;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  background-color: #ededed;
+}
+
+.logo img{
+  margin-top: -5px;
+  margin-left: 25px;
+}
+
+.menu{
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.menu li {
+  list-style-type: none;
+  margin-right: 10px;
+  height: 12px;
+  font-family: Arial;
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+}
+
+li select{
+  border: 0px;
+  outline: 0px;
+  background-color: #ededed;
+  height: 12px;
+  font-family: Arial;
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+}
+
+/* main section */
+.main{
+  width: 100%;
+  height: 85vh;
+  background-color: #dadada;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: baseline;
+}
+
+.main h2 {
+  font-family: Arial;
+  font-size: 48px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+  grid-column: 1/5;
+  justify-self: end;
+  align-self: center;
+  padding: 1em;
+}
+
+.main p{
+  font-family: Arial;
+  font-size: 32px;
+  color: #4a4a4a;
+  text-decoration: none solid rgb(74, 74, 74);
+  line-height: 36px;
+}
+
+.main .text-content{
+  grid-column: 5/10;
+  align-self: center;
+  padding: 1em;
+}
+
+.title{
+  font-family: Arial;
+  font-size: 48px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+  grid-column: 1/10;
+  justify-self: center;
+  align-self: end;
+  padding: 1em;
+}
+
+/* wrapper section */
+
+.wrapper{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.wrapper .carousel{
+  background-image: url(https://via.placeholder.com/380x480&text=Slide%20Desktop%201);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 150px;
+  margin-left: 50px;
+  grid-column: 1/8;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 60vh;
+}
+
+.wrapper .carousel-description{
+  grid-column: 8/13;
+  margin-top: 150px;
+  width: 100%;
+  margin-bottom: 50px;
+  height: 60vh;
+}
+
+.wrapper .carousel-invert{
+  background-image: url(https://via.placeholder.com/380x480&text=Slide%20Desktop%201);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 150px;
+  margin-left: 50px;
+  grid-column: 5/13;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 60vh;
+  margin-right: 55px;
+}
+
+.wrapper .carousel-description-invert{
+  grid-column: 1/5;
+  margin-top: 150px;
+  width: 100%;
+  margin-bottom: 50px;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.carousel button{
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+}
+
+.carousel-invert button{
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+}
+
+.slide-next{
+  grid-column: 6/6;
+  grid-row: 3/3;
+}
+
+.slide-back{
+  grid-column: 6/6;
+  grid-row: 4/4;
+}
+
+.carousel-logo img{
+  width: 65px;
+  height: 96px;
+  margin: 25px;
+}
+
+.carousel-description-invert .carousel-logo {
+  grid-column: 1/3;
+  justify-self: end;
+}
+.carousel-description-invert .carousel-content
+{
+  grid-column: 1/3;
+  justify-self: end;
+  text-align: end;
+}
+
+.carousel-content h2{
+  font-family: Arial;
+  font-size: 24px;
+  color: #2e2e2e;
+  margin-left: 25px;
+}
+
+.carousel-content h3{
+  font-family: Arial;
+  font-size: 16px;
+  color: #4a4a4a;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+.carousel-content p{
+  font-family: Arial;
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+
+.carousel-button{
+  width: 261px;
+  height: 53px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-size: cover;
+  font-family: Times;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+  display: block;
+  margin: 0px auto;
+  margin-top: 15px;
+  cursor:pointer;
+}
+
+/* footer */
+footer .info{
+  background-color: #ebebeb;
+  height: 305px;
+}
+
+.info p {
+  font-family: Arial;
+  font-size: 14px;
+  color: #4a4a4a;
+  text-decoration: none solid rgb(74, 74, 74);
+  line-height: 20px;
+  padding: 65px;
+  text-align: start;
+}
+footer .contact{
+  background-color: #363636;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  font-family: Avenir;
+}
+
+.contact-email{
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .social{
+  grid-column: 2/2;
+  justify-self: center;
+  align-self: center;
+}
+
+.contact-numbers{
+  grid-row: 2/2;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: start;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2em;
+}
+
+.contact-menu{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-menu li{
+  list-style-type: none;
+  margin-right: 10px;
+  height: 12px;
+  font-family: Arial;
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+}
+
+.contact-menu li select{
+  text-transform: uppercase;
+  background-color: #363636;
+}
+
+.copyright p {
+  background-color: #000000;
+  color: #fff;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1em;
+}
+
+/* mobile styles */
+
+.logo-mobile img {
+  margin-top: -5px;
+  margin-left: -20px;
+  width: 110px;
+}
+
+.menu-mobile {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  margin-top: 4px;
+  margin-right: -40px;
+}
+
+.menu-mobile li {
+  list-style-type: none;
+  margin-right: 10px;
+  height: 12px;
+  font-family: Arial;
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+}
+
+.logo-mobile img {
+  margin-top: -5px;
+  margin-left: -20px;
+  width: 110px;
+}
+
+.main-mobile .text-content {
+  width: 100%;
+  height: 85vh;
+  background-color: #dadada;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: baseline;
+  align-self: center;
+  justify-content: center;
+  text-align: inherit;
+  padding: 20px;
+  grid-column: 1/10;
+}
+
+.main-mobile h2 {
+  font-family: Arial;
+  font-size: 48px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+  grid-column: 1/10;
+  justify-self: center;
+  align-self: center;
+  margin-top: 25px;
+  padding: 0px;
+}
+
+
+
+.title-mobile {
+  font-family: Arial;
+  font-size: 48px;
+  color: #000000;
+  text-decoration: none solid rgb(0, 0, 0);
+  grid-column: 1/10;
+  justify-self: center;
+  align-self: center;
+  margin-top: 30px;
+  padding: 0px;
+}
+
+.main p {
+  font-size: 19px;
+  font-family: Arial;
+  color: #4a4a4a;
+  text-decoration: none solid rgb(74, 74, 74);
+  line-height: 36px;
+}
+
+.wrapper-mobile {
+  height: auto;
+  display: initial;
+  grid-template-columns: auto;
+}
+
+.wrapper-mobile .carousel {
+  background-image: url(https://via.placeholder.com/380x480&text=Slide%20Desktop%201);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 150px;
+  margin-left: 0px;
+  grid-column: none;
+  grid-row: none;
+  margin-bottom: 0px;
+  grid-column: 1/8;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 60vh;
+}
+
+.wrapper-mobile .carousel-description {
+  grid-column: none;
+  grid-row: none;
+  margin-top: 0px;
+  width: auto;
+  margin-bottom: none;
+  height: auto;
+  display: block;
+  margin: 0px;
+  margin-top: -50px;
+}
+
+.carousel-logo-mobile img {
+  width: 65px;
+  height: 96px;
+  display: block;
+  margin: 0px auto;
+  border: 2px solid #fff;
+}
+
+.carousel-content-mobile{
+  margin-bottom: 60px;
+}
+
+.wrapper-mobile .carousel-description-invert{
+  display: none;
+}
+
+.wrapper-mobile .carousel-invert{
+  display: none;
+}
+
+/* .info p {
+  padding: 30px;
+} */
+
+/* footer .info {
+  height: auto;
+} */
+
+footer .contact-mobile {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contact-email-mobile {
+  grid-row: 2/2;
+  grid-column: 1/3;
+}
+
+.contact-numbers-mobile {
+  grid-row: 3/3;
+  grid-column: 1/3;
+}
+
+footer .social-mobile {
+  grid-column: 1/2;
+  grid-column: 1/3;
+}
+
